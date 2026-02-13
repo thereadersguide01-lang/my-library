@@ -1,10 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>موقعي الأول</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبتي الرقمية الذكية</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .book-card:hover {
+            transform: translateY(-10px);
+        }
+        .book-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .book-card h3 {
+            margin: 15px 0 5px;
+            color: var(--primary-color);
+        }
+        .book-card p {
+            font-size: 0.9rem;
+            color: #666;
+            padding: 0 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="color: blue;">أهلاً بك في موقعي من Termux!</h1>
-    <p>تم إنشاء هذا الموقع باستخدام الهاتف فقط.</p>
+
+<header>
+    <h1>📚 مكتبة الجيل الذكي</h1>
+    <p>بوابتك نحو المعرفة والتعلم المستمر</p>
+</header>
+
+<div class="container">
+    <div class="books-grid">
+        <div class="book-card">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80" alt="تعلم البرمجة">
+            <h3>أساسيات البرمجة</h3>
+            <p>دليلك الشامل لتعلم لغات المستقبل من الصفر.</p>
+            <a href="#" class="btn">اقرأ الآن</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80" alt="تطوير الذات">
+            <h3>فن الهدوء</h3>
+            <p>كيف تحافظ على تركيزك في عالم مليء بالضجيج.</p>
+            <a href="#" class="btn">اقرأ الآن</a>
+        </div>
+
+        <div class="book-card">
+            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80" alt="التاريخ">
+            <h3>عجائب الحضارات</h3>
+            <p>رحلة عبر الزمن لاستكشاف أسرار العالم القديم.</p>
+            <a href="#" class="btn">اقرأ الآن</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    تم التطوير بواسطة مبرمج Termux المحترف © 2026
+</footer>
+
 </body>
 </html>
+
